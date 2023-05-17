@@ -12,9 +12,10 @@ class StringRes {
   static const singapor = 'Singapor';
   static const london = 'London';
   static const dubai = 'Dubai';
+  static const price = "\$500";
 
   static const discone =
-      'Travel Over 90+ countries with few taps on your mobile screen.';
+      'Traveling around the world means to explore different cultures, landscapes, and experiences. It is an opportunity to learn about new places and people.';
   static const discTwo =
       'A journey of a thousand miles must begin with a single step.';
   static const discthree = 'Also enjoy the best food task during travelling.';

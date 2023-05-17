@@ -35,10 +35,10 @@ Widget citylist() {
           Get.to(
             const HotelScreen(),
             arguments: {
-              "networkimage": countrydata[index].hotel,
-              // "networkimage": countrydata[index].hotel![index].hotelImage,
-              "hotelname": countrydata[index].countryNames,
-              // "hotelname": countrydata[index].hotel![index].hotelname,
+              "networkimage": countrydata[index].hotel?[index].hotelImage,
+              "hotelname": countrydata[index].hotel?[index].hotelname as String,
+              "hotelPrice":
+                  countrydata[index].hotel?[index].hotelPrice as String,
             },
           );
         },

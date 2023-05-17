@@ -13,7 +13,7 @@ class CityScreen extends StatelessWidget {
       body: Container(
           color: ColorsRes.deepPurple,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [Expanded(child: citylist())],
             ),

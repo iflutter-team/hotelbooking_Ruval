@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 NetworkImage letsTravelImage = const NetworkImage(
-    'https://wallpapershome.com/images/pages/pic_h/23276.jpg');
+    'https://wallpapershome.com/images/pages/pic_h/23716.jpg');
 
 NetworkImage travelTheWorldImage = const NetworkImage(
     'https://wallpapershome.com/images/pages/pic_h/23719.jpg');

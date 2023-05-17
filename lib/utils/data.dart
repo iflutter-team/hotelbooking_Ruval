@@ -13,11 +13,12 @@ class Country {
 class HotelData {
   final NetworkImage hotelImage;
   final String hotelname;
+  final String hotelPrice;
 
-  HotelData({
-    required this.hotelImage,
-    required this.hotelname,
-  });
+  HotelData(
+      {required this.hotelImage,
+      required this.hotelname,
+      required this.hotelPrice});
 }
 
 List<Country> countrydata = [
@@ -26,6 +27,7 @@ List<Country> countrydata = [
       countryNames: StringRes.newzealand,
       hotel: [
         HotelData(
+            hotelPrice: StringRes.price,
             hotelImage: newzealandhotelImage,
             hotelname: StringRes.newzealandhotel)
       ]),

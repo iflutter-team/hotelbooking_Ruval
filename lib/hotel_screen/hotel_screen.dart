@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotels/utils/colors.dart';
-import 'package:hotels/utils/data.dart';
+import 'hotel_screen_widget.dart';
 
 class HotelScreen extends StatelessWidget {
   const HotelScreen({
@@ -10,8 +10,18 @@ class HotelScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text(Get.arguments["hotelname"]),
+    return Container(
+      color: ColorsRes.deepPurple,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: hotelappbar(),
+        body: Column(
+          children: [hoteldatashow()],
+        ),
+      ),
     );
+    // Scaffold(
+    //   body: Text(Get.arguments["hotelname"]),
+    // );
   }
 }
