@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hotels/common_text/texts.dart';
 import 'package:hotels/hotel_screen/hotel_screen.dart';
 import 'package:hotels/utils/colors.dart';
 import 'package:hotels/utils/data.dart';
-
 import '../utils/icons.dart';
+import '../utils/text.dart';
 
 AppBar cityAppBar() {
   return AppBar(

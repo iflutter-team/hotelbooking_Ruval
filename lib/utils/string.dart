@@ -7,6 +7,7 @@ class StringRes {
   static const newzealand = 'Newzealand';
   static const newzealandhotel = 'Queenstown';
   static const indonesia = 'Indonesia';
+  static const indonesiahotel = ' JIMBARAN BAY';
   static const canada = 'Canada';
   static const japan = 'Japan';
   static const singapor = 'Singapor';

@@ -3,9 +3,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hotels/city_screen/city_scree.dart';
 import 'package:hotels/utils/colors.dart';
-import '../common_text/texts.dart';
 import '../utils/image.dart';
 import '../utils/string.dart';
+import '../utils/text.dart';
 
 Widget welcomeScreenSlider() {
   return CarouselSlider(

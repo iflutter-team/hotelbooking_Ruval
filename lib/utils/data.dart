@@ -31,7 +31,15 @@ List<Country> countrydata = [
             hotelImage: newzealandhotelImage,
             hotelname: StringRes.newzealandhotel)
       ]),
-  Country(countryImages: indonesiaImage, countryNames: StringRes.indonesia),
+  Country(
+      countryImages: indonesiaImage,
+      countryNames: StringRes.indonesia,
+      hotel: [
+        HotelData(
+            hotelImage: indonesiahotelImage,
+            hotelname: StringRes.indonesiahotel,
+            hotelPrice: StringRes.price)
+      ]),
   Country(countryImages: indiaImage, countryNames: StringRes.india),
   Country(countryImages: canadaImage, countryNames: StringRes.canada),
   Country(countryImages: japanImage, countryNames: StringRes.japan),

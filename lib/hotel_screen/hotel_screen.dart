@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:hotels/utils/colors.dart';
 import 'hotel_screen_widget.dart';
 
@@ -20,8 +19,5 @@ class HotelScreen extends StatelessWidget {
         ),
       ),
     );
-    // Scaffold(
-    //   body: Text(Get.arguments["hotelname"]),
-    // );
   }
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hotels/common_text/texts.dart';
-
 import '../utils/colors.dart';
 import '../utils/icons.dart';
+import '../utils/text.dart';
 
 AppBar hotelappbar() {
   return AppBar(
@@ -42,7 +41,10 @@ Widget hoteldatashow() {
             Get.arguments["hotelname"],
             style: TextStyleCommon.hoteltextStyle,
           ),
-          trailing: Text(Get.arguments["hotelPrice"]),
+          trailing: Text(
+            Get.arguments["hotelPrice"],
+            style: TextStyleCommon.pricetextStyle,
+          ),
         )
       ],
     ),
