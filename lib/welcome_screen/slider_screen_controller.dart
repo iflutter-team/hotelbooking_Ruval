@@ -2,8 +2,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:get/get.dart';
 
 class SliderController extends GetxController {
-  List<Map> data = [];
-  String valueImage = "";
+  Map valueImage = {};
 
   @override
   void onInit() {
@@ -11,13 +10,15 @@ class SliderController extends GetxController {
     super.onInit();
   }
 
-  FirebaseDatabase database = FirebaseDatabase.instance;
+  DatabaseReference database = FirebaseDatabase.instance.ref("images");
   Future<void> continues() async {
-    await database.ref("image").once().then(
+    await database.once().then(
       (value) {
-        String temp = value.snapshot.value as String;
+        Map temp = value.snapshot.value as Map;
+        print(temp);
         valueImage = temp;
       },
     );
+    print(valueImage);
   }
 }
