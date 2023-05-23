@@ -45,7 +45,7 @@ Widget hoteldatashow() {
             Get.arguments["hotelPrice"],
             style: TextStyleCommon.pricetextStyle,
           ),
-        )
+        ),
       ],
     ),
   );

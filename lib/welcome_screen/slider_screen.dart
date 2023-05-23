@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hotels/utils/colors.dart';
+import 'package:hotels/welcome_screen/slider_screen_controller.dart';
 import 'slider_screen_widget.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+  WelcomeScreen({super.key});
+
+  SliderController sliderController = Get.put(SliderController());
 
   @override
   Widget build(BuildContext context) {
