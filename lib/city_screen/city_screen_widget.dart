@@ -30,7 +30,7 @@ Widget citylist() {
   return GetBuilder<SliderController>(
     builder: (controller) => StaggeredGridView.countBuilder(
       crossAxisCount: 4,
-      itemCount: countrydata.length,
+      itemCount: controller.imageList.length,
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
@@ -49,7 +49,8 @@ Widget citylist() {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               image: DecorationImage(
-                image: NetworkImage(controller.valueImage[index]),
+                image:
+                    NetworkImage(controller.imageList[index]["countryimage"]),
                 fit: BoxFit.cover,
               ),
             ),
@@ -59,7 +60,8 @@ Widget citylist() {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      countrydata[index].countryNames!,
+                      controller.imageList[index]["countryName"],
+                      // countrydata[index].countryNames!,
                       style: TextStyleCommon.containersHeadingStyle,
                     ),
                   ]),
