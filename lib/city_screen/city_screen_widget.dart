@@ -36,13 +36,13 @@ Widget citylist() {
           onTap: () {
             Get.to(
               const HotelScreen(),
-              arguments: {
-                "networkimage": countrydata[index].hotel?[index].hotelImage,
-                "hotelname":
-                    countrydata[index].hotel?[index].hotelname as String,
-                "hotelPrice":
-                    countrydata[index].hotel?[index].hotelPrice as String,
-              },
+              // arguments: {
+              //   "networkimage": countrydata[index].hotel?[index].hotelImage,
+              //   "hotelname":
+              //       countrydata[index].hotel?[index].hotelname as String,
+              //   "hotelPrice":
+              //       countrydata[index].hotel?[index].hotelPrice as String,
+              // },
             );
           },
           child: Container(
@@ -61,7 +61,6 @@ Widget citylist() {
                   children: [
                     Text(
                       controller.imageList[index]["countryName"],
-                      // countrydata[index].countryNames!,
                       style: TextStyleCommon.containersHeadingStyle,
                     ),
                   ]),
