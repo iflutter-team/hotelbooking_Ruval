@@ -8,6 +8,7 @@ class SliderController extends GetxController {
   @override
   void onInit() {
     continues();
+
     super.onInit();
   }
 

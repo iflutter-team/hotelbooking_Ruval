@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hotels/hotel_screen/hotel_screen.dart';
 import 'package:hotels/utils/colors.dart';
-import 'package:hotels/utils/data.dart';
 import 'package:hotels/welcome_screen/slider_screen_controller.dart';
 import '../utils/icons.dart';
 import '../utils/text.dart';
@@ -36,13 +33,6 @@ Widget citylist() {
           onTap: () {
             Get.to(
               const HotelScreen(),
-              // arguments: {
-              //   "networkimage": countrydata[index].hotel?[index].hotelImage,
-              //   "hotelname":
-              //       countrydata[index].hotel?[index].hotelname as String,
-              //   "hotelPrice":
-              //       countrydata[index].hotel?[index].hotelPrice as String,
-              // },
             );
           },
           child: Container(

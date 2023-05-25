@@ -38,24 +38,23 @@ Widget hoteldatashow() {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   image: DecorationImage(
-                    image: NetworkImage(
-                        hotelcontroller.imageList[index]["hotelimage"]),
+                    image: NetworkImage(hotelcontroller.imageList[index]
+                        ["hotel"]["hotelimage"]),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
               ListTile(
                 title: Text(
-                  hotelcontroller.imageList[index]["hotelname"],
+                  hotelcontroller.imageList[index]["hotel"]["hotelname"],
                   style: TextStyleCommon.hoteltextStyle,
                 ),
                 trailing: Text(
-                  hotelcontroller.imageList[index]["hotelPrice"],
+                  hotelcontroller.imageList[index]["hotel"]["price"],
                   style: TextStyleCommon.pricetextStyle,
                 ),
                 subtitle: Text(
-                  hotelcontroller.imageList[index]["dis"],
-                  style: TextStyleCommon.pricetextStyle,
+                  hotelcontroller.imageList[index]["hotel"]["dis"],
                 ),
               ),
             ],
