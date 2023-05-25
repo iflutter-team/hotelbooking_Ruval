@@ -46,11 +46,15 @@ Widget hoteldatashow() {
               ),
               ListTile(
                 title: Text(
-                  Get.arguments["hotelname"],
+                  hotelcontroller.imageList[index]["hotelname"],
                   style: TextStyleCommon.hoteltextStyle,
                 ),
                 trailing: Text(
-                  Get.arguments["hotelPrice"],
+                  hotelcontroller.imageList[index]["hotelPrice"],
+                  style: TextStyleCommon.pricetextStyle,
+                ),
+                subtitle: Text(
+                  hotelcontroller.imageList[index]["dis"],
                   style: TextStyleCommon.pricetextStyle,
                 ),
               ),
