@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hotels/utils/image.dart';
-import 'package:hotels/utils/string.dart';
 
 class Country {
   final NetworkImage? countryImages;

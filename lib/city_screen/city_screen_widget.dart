@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
@@ -31,9 +33,8 @@ Widget citylist() {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            Get.to(
-              const HotelScreen(),
-            );
+            Get.to(() =>
+                HotelScreen(hotelList: controller.imageList[index]["hotel"]));
           },
           child: Container(
             decoration: BoxDecoration(

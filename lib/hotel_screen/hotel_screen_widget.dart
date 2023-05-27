@@ -21,44 +21,41 @@ AppBar hotelappbar() {
   );
 }
 
-Widget hoteldatashow() {
+Widget hoteldatashow(List hotelList) {
   return GetBuilder<SliderController>(
-    builder: (hotelcontroller) => ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: hotelcontroller.imageList.length,
-      itemBuilder: (context, index) => Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Expanded(
-          child: Column(
-            children: [
-              Container(
-                height: 250,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  image: DecorationImage(
-                    image: NetworkImage(hotelcontroller.imageList[index]
-                        ["hotel"]["hotelimage"]),
-                    fit: BoxFit.cover,
-                  ),
+    builder: (hotelcontroller) => Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        itemCount: hotelList.length,
+        itemBuilder: (context, index) => Column(
+          children: [
+            Container(
+              height: 250,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                image: DecorationImage(
+                  image: NetworkImage(hotelList[index]["hotelimage"]),
+                  fit: BoxFit.cover,
                 ),
               ),
-              ListTile(
-                title: Text(
-                  hotelcontroller.imageList[index]["hotel"]["hotelname"],
-                  style: TextStyleCommon.hoteltextStyle,
-                ),
-                trailing: Text(
-                  hotelcontroller.imageList[index]["hotel"]["price"],
-                  style: TextStyleCommon.pricetextStyle,
-                ),
-                subtitle: Text(
-                  hotelcontroller.imageList[index]["hotel"]["dis"],
-                ),
+            ),
+            ListTile(
+              title: Text(
+                hotelList[index]["hotelname"],
+                style: TextStyleCommon.hoteltextStyle,
               ),
-            ],
-          ),
+              trailing: Text(
+                hotelList[index]["price"],
+                style: TextStyleCommon.pricetextStyle,
+              ),
+              subtitle: Text(
+                hotelList[index]["dis"],
+              ),
+            ),
+          ],
         ),
       ),
     ),
