@@ -1,9 +1,6 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:hotels/hotel_screen/hotel_screen.dart';
 import 'package:hotels/utils/colors.dart';
 import 'package:hotels/welcome_screen/slider_screen_controller.dart';
 import '../utils/icons.dart';
@@ -22,6 +19,7 @@ AppBar cityAppBar() {
     ),
     backgroundColor: ColorsRes.deepPurple,
     elevation: 0,
+    centerTitle: true,
   );
 }
 
@@ -32,16 +30,13 @@ Widget citylist() {
       itemCount: controller.imageList.length,
       itemBuilder: (context, index) {
         return GestureDetector(
-          onTap: () {
-            Get.to(() =>
-                HotelScreen(hotelList: controller.imageList[index]["hotel"]));
-          },
+          onTap: () => controller.ontap(index),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               image: DecorationImage(
                 image:
-                    NetworkImage(controller.imageList[index]["countryimage"]),
+                    (NetworkImage(controller.imageList[index]["countryimage"])),
                 fit: BoxFit.cover,
               ),
             ),

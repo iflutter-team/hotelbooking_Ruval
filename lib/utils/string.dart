@@ -14,6 +14,16 @@ class StringRes {
   static const london = 'London';
   static const dubai = 'Dubai';
   static const price = "\$500";
+  static const book = "BookNow";
+  static const details = "Detail";
+  static const hintname = "EnterName";
+  static const labelname = "EnterName";
+  static const hintnumber = "EnterNumber";
+  static const labelnumber = "EnterNumber";
+  static const hintemail = "EnterValidEmail";
+  static const labelemail = "EnterValidEmail";
+  static const hintcity = "EnterCity";
+  static const labelcity = "EnterCity";
 
   static const discone =
       'Traveling around the world means to explore different cultures, landscapes, and experiences. It is an opportunity to learn about new places and people.';

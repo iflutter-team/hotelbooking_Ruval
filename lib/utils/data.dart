@@ -1,23 +1,21 @@
-import 'package:flutter/material.dart';
+// class Country {
+//   final NetworkImage? countryImages;
+//   final String? countryNames;
+//   final List<HotelData>? hotel;
 
-class Country {
-  final NetworkImage? countryImages;
-  final String? countryNames;
-  final List<HotelData>? hotel;
+//   Country({required this.countryImages, this.countryNames, this.hotel});
+// }
 
-  Country({required this.countryImages, this.countryNames, this.hotel});
-}
+// class HotelData {
+//   final NetworkImage hotelImage;
+//   final String hotelname;
+//   final String hotelPrice;
 
-class HotelData {
-  final NetworkImage hotelImage;
-  final String hotelname;
-  final String hotelPrice;
-
-  HotelData(
-      {required this.hotelImage,
-      required this.hotelname,
-      required this.hotelPrice});
-}
+//   HotelData(
+//       {required this.hotelImage,
+//       required this.hotelname,
+//       required this.hotelPrice});
+// }
 
 // List<Country> countrydata = [
 //   Country(

@@ -110,7 +110,7 @@ Widget welcomeScreenSlider() {
   );
 }
 
-Widget welcomeScreenButton = OpenContainer(
+Widget sliderScreenButton = OpenContainer(
   closedColor: ColorsRes.white,
   transitionDuration: const Duration(seconds: 1),
   closedBuilder: (context, openWidget) {

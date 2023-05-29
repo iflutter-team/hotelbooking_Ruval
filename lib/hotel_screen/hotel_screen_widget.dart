@@ -1,5 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hotels/hotel_screen/hotel_screen_controller.dart';
+import 'package:hotels/utils/string.dart';
 import 'package:hotels/welcome_screen/slider_screen_controller.dart';
 import '../utils/colors.dart';
 import '../utils/icons.dart';
@@ -27,7 +31,7 @@ Widget hoteldatashow(List hotelList) {
       padding: const EdgeInsets.all(8.0),
       child: ListView.builder(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: hotelList.length,
         itemBuilder: (context, index) => Column(
           children: [
@@ -55,9 +59,32 @@ Widget hoteldatashow(List hotelList) {
                 hotelList[index]["dis"],
               ),
             ),
+            const SizedBox(
+              height: 50,
+            ),
+            button()
           ],
         ),
       ),
+    ),
+  );
+}
+
+Widget button() {
+  return GetBuilder<HotelController>(
+    builder: (controller) => GestureDetector(
+      onTap: () => controller.book(),
+      child: Container(
+          decoration: BoxDecoration(
+              color: ColorsRes.white, borderRadius: BorderRadius.circular(6)),
+          height: 50,
+          width: 120,
+          child: Center(
+            child: Text(
+              StringRes.book,
+              style: TextStyleCommon.continuetextStyle,
+            ),
+          )),
     ),
   );
 }

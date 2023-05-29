@@ -28,7 +28,7 @@ class WelcomeScreen extends StatelessWidget {
                   Center(
                     child: welcomeScreenSlider(),
                   ),
-                  welcomeScreenButton,
+                  sliderScreenButton,
                 ],
               ),
             ),
