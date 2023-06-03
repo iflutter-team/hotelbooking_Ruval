@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:hotels/utils/colors.dart';
-import 'package:hotels/welcome_screen/slider_screen_controller.dart';
+import 'package:hotels/slider_screen/slider_screen_controller.dart';
 import '../utils/icons.dart';
 import '../utils/text.dart';
 

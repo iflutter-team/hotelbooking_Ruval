@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotels/hotel_screen/hotel_screen_controller.dart';
 import 'package:hotels/utils/string.dart';
-import 'package:hotels/welcome_screen/slider_screen_controller.dart';
+import 'package:hotels/slider_screen/slider_screen_controller.dart';
 import '../utils/colors.dart';
 import '../utils/icons.dart';
 import '../utils/text.dart';
@@ -36,7 +36,7 @@ Widget hoteldatashow(List hotelList) {
         itemBuilder: (context, index) => Column(
           children: [
             Container(
-              height: 250,
+              height: Get.height * 0.2913,
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
@@ -59,8 +59,8 @@ Widget hoteldatashow(List hotelList) {
                 hotelList[index]["dis"],
               ),
             ),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: Get.height * 0.0582,
             ),
             button()
           ],
@@ -77,8 +77,8 @@ Widget button() {
       child: Container(
           decoration: BoxDecoration(
               color: ColorsRes.white, borderRadius: BorderRadius.circular(6)),
-          height: 50,
-          width: 120,
+          height: Get.height * 0.0582,
+          width: Get.width * 0.3053,
           child: Center(
             child: Text(
               StringRes.book,

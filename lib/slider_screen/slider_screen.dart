@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotels/utils/colors.dart';
-import 'package:hotels/welcome_screen/slider_screen_controller.dart';
+import 'package:hotels/slider_screen/slider_screen_controller.dart';
 import 'slider_screen_widget.dart';
 
 class WelcomeScreen extends StatelessWidget {

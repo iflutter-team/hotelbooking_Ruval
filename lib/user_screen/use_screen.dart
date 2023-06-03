@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:hotels/user_screen/user_screen_controller.dart';
 import 'package:hotels/user_screen/user_screen_widget.dart';
 import 'package:hotels/utils/colors.dart';
@@ -26,8 +25,8 @@ class _UserScreenState extends State<UserScreen> {
           color: ColorsRes.deepPurple,
           child: Column(
             children: [
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: Get.height * 0.0116,
               ),
               nametextfild(),
             ],

@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hotels/city_screen/city_scree.dart';
 import 'package:hotels/utils/colors.dart';
 import '../utils/image.dart';
@@ -8,9 +9,11 @@ import '../utils/string.dart';
 import '../utils/text.dart';
 
 Widget welcomeScreenSlider() {
+  // print(Get.height);
+  // print(Get.width);
   return CarouselSlider(
     options: CarouselOptions(
-      height: 450,
+      height: Get.height * 0.5244,
       enlargeCenterPage: true,
       enableInfiniteScroll: true,
       autoPlay: true,
@@ -21,7 +24,7 @@ Widget welcomeScreenSlider() {
       Container(
         padding: const EdgeInsets.all(20.0),
         margin: const EdgeInsets.all(5.0),
-        width: 300,
+        width: Get.height * 0.3496,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: travelTheWorldImage,
@@ -32,13 +35,15 @@ Widget welcomeScreenSlider() {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.end,
-          children: const [
-            Text(
+          children: [
+            const Text(
               StringRes.travelTheWorld,
               style: TextStyleCommon.containersHeadingStyle,
             ),
-            SizedBox(height: 12.0),
-            Padding(
+            SizedBox(
+              height: Get.height * 0.0139,
+            ),
+            const Padding(
               padding: EdgeInsets.only(right: 30.0),
               child: Text(StringRes.discone,
                   style: TextStyleCommon.containertextStyle),
@@ -60,13 +65,15 @@ Widget welcomeScreenSlider() {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.end,
-          children: const [
-            Text(
+          children: [
+            const Text(
               StringRes.letTravel,
               style: TextStyleCommon.containersHeadingStyle,
             ),
-            SizedBox(height: 12.0),
-            Padding(
+            SizedBox(
+              height: Get.height * 0.0139,
+            ),
+            const Padding(
               padding: EdgeInsets.only(right: 30.0),
               child: Text(
                 StringRes.discTwo,
@@ -90,13 +97,15 @@ Widget welcomeScreenSlider() {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.end,
-          children: const [
-            Text(
+          children: [
+            const Text(
               StringRes.enjoyFood,
               style: TextStyleCommon.containersHeadingStyle,
             ),
-            SizedBox(height: 12.0),
-            Padding(
+            SizedBox(
+              height: Get.height * 0.0139,
+            ),
+            const Padding(
               padding: EdgeInsets.only(right: 30.0),
               child: Text(
                 StringRes.discthree,
@@ -115,8 +124,8 @@ Widget sliderScreenButton = OpenContainer(
   transitionDuration: const Duration(seconds: 1),
   closedBuilder: (context, openWidget) {
     return SizedBox(
-      height: 50,
-      width: 100,
+      height: Get.height * 0.0582,
+      width: Get.width * 0.2544,
       child: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
