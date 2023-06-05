@@ -17,6 +17,7 @@ class WelcomeScreen extends StatelessWidget {
       decoration: BoxDecoration(color: ColorsRes.deepPurple),
       child: SafeArea(
         child: Scaffold(
+          // appBar: sliderAppBar,
           backgroundColor: Colors.transparent,
           body: SizedBox(
             width: double.infinity,

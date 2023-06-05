@@ -8,6 +8,13 @@ import '../utils/image.dart';
 import '../utils/string.dart';
 import '../utils/text.dart';
 
+AppBar sliderAppBar = AppBar(
+  centerTitle: true,
+  automaticallyImplyLeading: false,
+  backgroundColor: Colors.transparent,
+  elevation: 0,
+  title: Text(StringRes.appname),
+);
 Widget welcomeScreenSlider() {
   // print(Get.height);
   // print(Get.width);
@@ -45,8 +52,11 @@ Widget welcomeScreenSlider() {
             ),
             const Padding(
               padding: EdgeInsets.only(right: 30.0),
-              child: Text(StringRes.discone,
-                  style: TextStyleCommon.containertextStyle),
+              child: Text(
+                StringRes.discone,
+                style: TextStyleCommon.containertextStyle,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ],
         ),
@@ -78,6 +88,7 @@ Widget welcomeScreenSlider() {
               child: Text(
                 StringRes.discTwo,
                 style: TextStyleCommon.containertextStyle,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ],
@@ -110,6 +121,7 @@ Widget welcomeScreenSlider() {
               child: Text(
                 StringRes.discthree,
                 style: TextStyleCommon.containertextStyle,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ],

@@ -29,6 +29,10 @@ class SliderController extends GetxController {
   }
 
   ontap(int index) {
-    Get.to(() => HotelScreen(hotelList: imageList[index]["hotel"]));
+    Get.to(() => HotelScreen(
+          hotelList: imageList[index]["hotel"],
+          index: index,
+          imageList: imageList,
+        ));
   }
 }

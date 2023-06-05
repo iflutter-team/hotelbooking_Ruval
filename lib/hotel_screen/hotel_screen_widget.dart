@@ -1,16 +1,21 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotels/hotel_screen/hotel_screen_controller.dart';
 import 'package:hotels/utils/string.dart';
 import 'package:hotels/slider_screen/slider_screen_controller.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import '../utils/colors.dart';
 import '../utils/icons.dart';
 import '../utils/text.dart';
 
-AppBar hotelappbar() {
+AppBar hotelappbar(List imageList, int index) {
   return AppBar(
+    title: GetBuilder<SliderController>(
+      builder: (controller) => Text(
+        imageList[index]["countryName"] + StringRes.hotle,
+        style: TextStyleCommon.containersHeadingStyle,
+      ),
+    ),
     leading: IconButton(
         onPressed: () {
           Get.back();
@@ -62,7 +67,7 @@ Widget hoteldatashow(List hotelList) {
             SizedBox(
               height: Get.height * 0.0582,
             ),
-            button()
+            button(),
           ],
         ),
       ),
@@ -73,13 +78,13 @@ Widget hoteldatashow(List hotelList) {
 Widget button() {
   return GetBuilder<HotelController>(
     builder: (controller) => GestureDetector(
-      onTap: () => controller.book(),
+      onTap: () => controller.booking(),
       child: Container(
           decoration: BoxDecoration(
               color: ColorsRes.white, borderRadius: BorderRadius.circular(6)),
           height: Get.height * 0.0582,
           width: Get.width * 0.3053,
-          child: Center(
+          child: const Center(
             child: Text(
               StringRes.book,
               style: TextStyleCommon.continuetextStyle,
@@ -88,3 +93,7 @@ Widget button() {
     ),
   );
 }
+
+// Widget webview() {
+//   return;
+// }
