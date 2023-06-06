@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:hotels/hotel_screen/hotel_screen_controller.dart';
 import 'package:hotels/utils/string.dart';
 import 'package:hotels/slider_screen/slider_screen_controller.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import '../utils/colors.dart';
 import '../utils/icons.dart';
 import '../utils/text.dart';
@@ -12,7 +11,7 @@ AppBar hotelappbar(List imageList, int index) {
   return AppBar(
     title: GetBuilder<SliderController>(
       builder: (controller) => Text(
-        imageList[index]["countryName"] + StringRes.hotle,
+        imageList[index]["countryName"] + StringRes.hotel,
         style: TextStyleCommon.containersHeadingStyle,
       ),
     ),
@@ -67,7 +66,7 @@ Widget hoteldatashow(List hotelList) {
             SizedBox(
               height: Get.height * 0.0582,
             ),
-            button(),
+            button(hotelList, index),
           ],
         ),
       ),
@@ -75,10 +74,10 @@ Widget hoteldatashow(List hotelList) {
   );
 }
 
-Widget button() {
+Widget button(List hotelList, int index) {
   return GetBuilder<HotelController>(
     builder: (controller) => GestureDetector(
-      onTap: () => controller.booking(),
+      onTap: () => controller.booking(hotelList, index),
       child: Container(
           decoration: BoxDecoration(
               color: ColorsRes.white, borderRadius: BorderRadius.circular(6)),
@@ -93,7 +92,3 @@ Widget button() {
     ),
   );
 }
-
-// Widget webview() {
-//   return;
-// }

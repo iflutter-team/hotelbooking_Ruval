@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotels/hotel_screen/hotel_screen_controller.dart';
 import 'package:hotels/utils/colors.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import 'hotel_screen_widget.dart';
 
 class HotelScreen extends StatelessWidget {

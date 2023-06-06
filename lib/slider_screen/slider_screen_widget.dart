@@ -13,7 +13,7 @@ AppBar sliderAppBar = AppBar(
   automaticallyImplyLeading: false,
   backgroundColor: Colors.transparent,
   elevation: 0,
-  title: Text(StringRes.appname),
+  title: const Text(StringRes.appname),
 );
 Widget welcomeScreenSlider() {
   // print(Get.height);
