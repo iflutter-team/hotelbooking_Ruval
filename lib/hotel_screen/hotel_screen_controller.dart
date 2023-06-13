@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:hotels/utils/string.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class HotelController extends GetxController {
