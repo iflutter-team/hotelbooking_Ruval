@@ -21,6 +21,43 @@ Widget welcomeScreenSlider() {
   // print(Get.width);
   return CarouselSlider(
     options: CarouselOptions(
+      onPageChanged: (index, reason) =>
+          GetBuilder<SliderController>(builder: (controller) {
+        controller.changeindex = index;
+        return Container(
+          padding: const EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(5.0),
+          width: Get.height * 0.3496,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(controller.imageData[index]),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const Text(
+                StringRes.travelTheWorld,
+                style: TextStyleCommon.containersHeadingStyle,
+              ),
+              SizedBox(
+                height: Get.height * 0.0139,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(right: 30.0),
+                child: Text(
+                  StringRes.discone,
+                  style: TextStyleCommon.containertextStyle,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
+          ),
+        );
+      }),
       height: Get.height * 0.5244,
       enlargeCenterPage: true,
       enableInfiniteScroll: true,
@@ -36,7 +73,8 @@ Widget welcomeScreenSlider() {
           width: Get.height * 0.3496,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage(slidercontroller.imageData[0]),
+              image: NetworkImage(slidercontroller
+                  .imageData[slidercontroller.changeindex ?? 0]),
               fit: BoxFit.cover,
             ),
             borderRadius: BorderRadius.circular(20.0),
