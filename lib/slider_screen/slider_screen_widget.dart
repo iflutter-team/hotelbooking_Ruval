@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotels/city_screen/city_scree.dart';
+import 'package:hotels/slider_screen/slider_screen_controller.dart';
 import 'package:hotels/utils/colors.dart';
 import '../utils/image.dart';
 import '../utils/string.dart';
@@ -28,105 +29,107 @@ Widget welcomeScreenSlider() {
       autoPlayAnimationDuration: const Duration(milliseconds: 800),
     ),
     items: [
-      Container(
-        padding: const EdgeInsets.all(20.0),
-        margin: const EdgeInsets.all(5.0),
-        width: Get.height * 0.3496,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: travelTheWorldImage,
-            fit: BoxFit.cover,
+      GetBuilder<SliderController>(
+        builder: (slidercontroller) => Container(
+          padding: const EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(5.0),
+          width: Get.height * 0.3496,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(slidercontroller.imageData[0]),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.circular(20.0),
           ),
-          borderRadius: BorderRadius.circular(20.0),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            const Text(
-              StringRes.travelTheWorld,
-              style: TextStyleCommon.containersHeadingStyle,
-            ),
-            SizedBox(
-              height: Get.height * 0.0139,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(right: 30.0),
-              child: Text(
-                StringRes.discone,
-                style: TextStyleCommon.containertextStyle,
-                overflow: TextOverflow.ellipsis,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const Text(
+                StringRes.travelTheWorld,
+                style: TextStyleCommon.containersHeadingStyle,
               ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: const EdgeInsets.all(20.0),
-        margin: const EdgeInsets.all(5.0),
-        width: 300,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: letsTravelImage,
-            fit: BoxFit.cover,
+              SizedBox(
+                height: Get.height * 0.0139,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(right: 30.0),
+                child: Text(
+                  StringRes.discone,
+                  style: TextStyleCommon.containertextStyle,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
           ),
-          borderRadius: BorderRadius.circular(20.0),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            const Text(
-              StringRes.letTravel,
-              style: TextStyleCommon.containersHeadingStyle,
-            ),
-            SizedBox(
-              height: Get.height * 0.0139,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(right: 30.0),
-              child: Text(
-                StringRes.discTwo,
-                style: TextStyleCommon.containertextStyle,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: const EdgeInsets.all(20.0),
-        margin: const EdgeInsets.all(5.0),
-        width: 300,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: enjoyFoodImage,
-            fit: BoxFit.cover,
-          ),
-          borderRadius: BorderRadius.circular(20.0),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            const Text(
-              StringRes.enjoyFood,
-              style: TextStyleCommon.containersHeadingStyle,
-            ),
-            SizedBox(
-              height: Get.height * 0.0139,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(right: 30.0),
-              child: Text(
-                StringRes.discthree,
-                style: TextStyleCommon.containertextStyle,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ],
-        ),
-      ),
+      )
+      // Container(
+      //   padding: const EdgeInsets.all(20.0),
+      //   margin: const EdgeInsets.all(5.0),
+      //   width: 300,
+      //   decoration: BoxDecoration(
+      //     image: DecorationImage(
+      //       image: letsTravelImage,
+      //       fit: BoxFit.cover,
+      //     ),
+      //     borderRadius: BorderRadius.circular(20.0),
+      //   ),
+      //   child: Column(
+      //     crossAxisAlignment: CrossAxisAlignment.start,
+      //     mainAxisAlignment: MainAxisAlignment.end,
+      //     children: [
+      //       const Text(
+      //         StringRes.letTravel,
+      //         style: TextStyleCommon.containersHeadingStyle,
+      //       ),
+      //       SizedBox(
+      //         height: Get.height * 0.0139,
+      //       ),
+      //       const Padding(
+      //         padding: EdgeInsets.only(right: 30.0),
+      //         child: Text(
+      //           StringRes.discTwo,
+      //           style: TextStyleCommon.containertextStyle,
+      //           overflow: TextOverflow.ellipsis,
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+      // Container(
+      //   padding: const EdgeInsets.all(20.0),
+      //   margin: const EdgeInsets.all(5.0),
+      //   width: 300,
+      //   decoration: BoxDecoration(
+      //     image: DecorationImage(
+      //       image: enjoyFoodImage,
+      //       fit: BoxFit.cover,
+      //     ),
+      //     borderRadius: BorderRadius.circular(20.0),
+      //   ),
+      //   child: Column(
+      //     crossAxisAlignment: CrossAxisAlignment.start,
+      //     mainAxisAlignment: MainAxisAlignment.end,
+      //     children: [
+      //       const Text(
+      //         StringRes.enjoyFood,
+      //         style: TextStyleCommon.containersHeadingStyle,
+      //       ),
+      //       SizedBox(
+      //         height: Get.height * 0.0139,
+      //       ),
+      //       const Padding(
+      //         padding: EdgeInsets.only(right: 30.0),
+      //         child: Text(
+      //           StringRes.discthree,
+      //           style: TextStyleCommon.containertextStyle,
+      //           overflow: TextOverflow.ellipsis,
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
     ],
   );
 }
