@@ -15,7 +15,6 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SliderController>(
-      id: "update",
       builder: (controller) => Container(
         height: 800,
         width: 200,
