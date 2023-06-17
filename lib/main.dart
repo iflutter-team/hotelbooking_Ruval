@@ -6,12 +6,14 @@ import 'package:hotels/slider_screen/slider_screen.dart';
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(GetMaterialApp(
-    builder: (context, widget) => MediaQuery(
-        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-        child: widget!),
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(useMaterial3: true),
-    home: WelcomeScreen(),
-  ));
+  runApp(
+    GetMaterialApp(
+      builder: (context, widget) => MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+          child: widget!),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(useMaterial3: true),
+      home: WelcomeScreen(),
+    ),
+  );
 }

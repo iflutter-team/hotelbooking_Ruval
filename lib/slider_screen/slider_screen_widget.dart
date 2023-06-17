@@ -19,52 +19,54 @@ AppBar sliderAppBar = AppBar(
 Widget welcomeScreenSlider() {
   // print(Get.height);
   // print(Get.width);
-  return CarouselSlider.builder(
-    itemCount: 3,
-    itemBuilder: (context, index, realIndex) =>
-        GetBuilder<SliderController>(builder: (controller) {
-      return Container(
-        padding: const EdgeInsets.all(20.0),
-        margin: const EdgeInsets.all(5.0),
-        width: Get.height * 0.3496,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: NetworkImage(controller.imageData[index]),
-            fit: BoxFit.cover,
-          ),
-          borderRadius: BorderRadius.circular(20.0),
+  return GetBuilder<SliderController>(
+    builder: (controller) => CarouselSlider.builder(
+        options: CarouselOptions(
+          height: Get.height * 0.5244,
+          enlargeCenterPage: true,
+          enableInfiniteScroll: true,
+          autoPlay: true,
+          autoPlayCurve: Curves.fastOutSlowIn,
+          autoPlayAnimationDuration: const Duration(milliseconds: 800),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            const Text(
-              StringRes.travelTheWorld,
-              style: TextStyleCommon.containersHeadingStyle,
-            ),
-            SizedBox(
-              height: Get.height * 0.0139,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(right: 30.0),
-              child: Text(
-                StringRes.discone,
-                style: TextStyleCommon.containertextStyle,
-                overflow: TextOverflow.ellipsis,
+        itemCount: controller.imageData.length,
+        itemBuilder: (context, index, realIndex) {
+          controller.imageindex = index;
+          return Container(
+            padding: const EdgeInsets.all(20.0),
+            margin: const EdgeInsets.all(5.0),
+            width: Get.height * 0.3496,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(controller.imageData[index]["image"]),
+                fit: BoxFit.cover,
               ),
+              borderRadius: BorderRadius.circular(20.0),
             ),
-          ],
-        ),
-      );
-    }),
-    options: CarouselOptions(
-      height: Get.height * 0.5244,
-      enlargeCenterPage: true,
-      enableInfiniteScroll: true,
-      autoPlay: true,
-      autoPlayCurve: Curves.fastOutSlowIn,
-      autoPlayAnimationDuration: const Duration(milliseconds: 800),
-    ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  controller.imageData[index]["name"],
+                  style: TextStyleCommon.containersHeadingStyle,
+                ),
+                SizedBox(
+                  height: Get.height * 0.0139,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 30.0),
+                  child: Text(
+                    controller.imageData[index]["des"],
+                    style: TextStyleCommon.containertextStyle,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }),
+
     // items: [
     //   GetBuilder<SliderController>(
     //     builder: (slidercontroller) => Container(
