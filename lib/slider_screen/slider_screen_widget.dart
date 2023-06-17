@@ -19,45 +19,45 @@ AppBar sliderAppBar = AppBar(
 Widget welcomeScreenSlider() {
   // print(Get.height);
   // print(Get.width);
-  return CarouselSlider(
-    options: CarouselOptions(
-      onPageChanged: (index, reason) =>
-          GetBuilder<SliderController>(builder: (controller) {
-        controller.changeindex = index;
-        return Container(
-          padding: const EdgeInsets.all(20.0),
-          margin: const EdgeInsets.all(5.0),
-          width: Get.height * 0.3496,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(controller.imageData[index]),
-              fit: BoxFit.cover,
+  return CarouselSlider.builder(
+    itemCount: 3,
+    itemBuilder: (context, index, realIndex) =>
+        GetBuilder<SliderController>(builder: (controller) {
+      return Container(
+        padding: const EdgeInsets.all(20.0),
+        margin: const EdgeInsets.all(5.0),
+        width: Get.height * 0.3496,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(controller.imageData[index]),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            const Text(
+              StringRes.travelTheWorld,
+              style: TextStyleCommon.containersHeadingStyle,
             ),
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              const Text(
-                StringRes.travelTheWorld,
-                style: TextStyleCommon.containersHeadingStyle,
+            SizedBox(
+              height: Get.height * 0.0139,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(right: 30.0),
+              child: Text(
+                StringRes.discone,
+                style: TextStyleCommon.containertextStyle,
+                overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(
-                height: Get.height * 0.0139,
-              ),
-              const Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: Text(
-                  StringRes.discone,
-                  style: TextStyleCommon.containertextStyle,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ],
-          ),
-        );
-      }),
+            ),
+          ],
+        ),
+      );
+    }),
+    options: CarouselOptions(
       height: Get.height * 0.5244,
       enlargeCenterPage: true,
       enableInfiniteScroll: true,
@@ -65,110 +65,110 @@ Widget welcomeScreenSlider() {
       autoPlayCurve: Curves.fastOutSlowIn,
       autoPlayAnimationDuration: const Duration(milliseconds: 800),
     ),
-    items: [
-      GetBuilder<SliderController>(
-        builder: (slidercontroller) => Container(
-          padding: const EdgeInsets.all(20.0),
-          margin: const EdgeInsets.all(5.0),
-          width: Get.height * 0.3496,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(slidercontroller
-                  .imageData[slidercontroller.changeindex ?? 0]),
-              fit: BoxFit.cover,
-            ),
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              const Text(
-                StringRes.travelTheWorld,
-                style: TextStyleCommon.containersHeadingStyle,
-              ),
-              SizedBox(
-                height: Get.height * 0.0139,
-              ),
-              const Padding(
-                padding: EdgeInsets.only(right: 30.0),
-                child: Text(
-                  StringRes.discone,
-                  style: TextStyleCommon.containertextStyle,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ],
-          ),
-        ),
-      )
-      // Container(
-      //   padding: const EdgeInsets.all(20.0),
-      //   margin: const EdgeInsets.all(5.0),
-      //   width: 300,
-      //   decoration: BoxDecoration(
-      //     image: DecorationImage(
-      //       image: letsTravelImage,
-      //       fit: BoxFit.cover,
-      //     ),
-      //     borderRadius: BorderRadius.circular(20.0),
-      //   ),
-      //   child: Column(
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     mainAxisAlignment: MainAxisAlignment.end,
-      //     children: [
-      //       const Text(
-      //         StringRes.letTravel,
-      //         style: TextStyleCommon.containersHeadingStyle,
-      //       ),
-      //       SizedBox(
-      //         height: Get.height * 0.0139,
-      //       ),
-      //       const Padding(
-      //         padding: EdgeInsets.only(right: 30.0),
-      //         child: Text(
-      //           StringRes.discTwo,
-      //           style: TextStyleCommon.containertextStyle,
-      //           overflow: TextOverflow.ellipsis,
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      // ),
-      // Container(
-      //   padding: const EdgeInsets.all(20.0),
-      //   margin: const EdgeInsets.all(5.0),
-      //   width: 300,
-      //   decoration: BoxDecoration(
-      //     image: DecorationImage(
-      //       image: enjoyFoodImage,
-      //       fit: BoxFit.cover,
-      //     ),
-      //     borderRadius: BorderRadius.circular(20.0),
-      //   ),
-      //   child: Column(
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     mainAxisAlignment: MainAxisAlignment.end,
-      //     children: [
-      //       const Text(
-      //         StringRes.enjoyFood,
-      //         style: TextStyleCommon.containersHeadingStyle,
-      //       ),
-      //       SizedBox(
-      //         height: Get.height * 0.0139,
-      //       ),
-      //       const Padding(
-      //         padding: EdgeInsets.only(right: 30.0),
-      //         child: Text(
-      //           StringRes.discthree,
-      //           style: TextStyleCommon.containertextStyle,
-      //           overflow: TextOverflow.ellipsis,
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      // ),
-    ],
+    // items: [
+    //   GetBuilder<SliderController>(
+    //     builder: (slidercontroller) => Container(
+    //       padding: const EdgeInsets.all(20.0),
+    //       margin: const EdgeInsets.all(5.0),
+    //       width: Get.height * 0.3496,
+    //       decoration: BoxDecoration(
+    //         image: DecorationImage(
+    //           image: NetworkImage(slidercontroller
+    //               .imageData[slidercontroller.changeindex ?? 0]),
+    //           fit: BoxFit.cover,
+    //         ),
+    //         borderRadius: BorderRadius.circular(20.0),
+    //       ),
+    //       child: Column(
+    //         crossAxisAlignment: CrossAxisAlignment.start,
+    //         mainAxisAlignment: MainAxisAlignment.end,
+    //         children: [
+    //           const Text(
+    //             StringRes.travelTheWorld,
+    //             style: TextStyleCommon.containersHeadingStyle,
+    //           ),
+    //           SizedBox(
+    //             height: Get.height * 0.0139,
+    //           ),
+    //           const Padding(
+    //             padding: EdgeInsets.only(right: 30.0),
+    //             child: Text(
+    //               StringRes.discone,
+    //               style: TextStyleCommon.containertextStyle,
+    //               overflow: TextOverflow.ellipsis,
+    //             ),
+    //           ),
+    //         ],
+    //       ),
+    //     ),
+    //   )
+    // Container(
+    //   padding: const EdgeInsets.all(20.0),
+    //   margin: const EdgeInsets.all(5.0),
+    //   width: 300,
+    //   decoration: BoxDecoration(
+    //     image: DecorationImage(
+    //       image: letsTravelImage,
+    //       fit: BoxFit.cover,
+    //     ),
+    //     borderRadius: BorderRadius.circular(20.0),
+    //   ),
+    //   child: Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     mainAxisAlignment: MainAxisAlignment.end,
+    //     children: [
+    //       const Text(
+    //         StringRes.letTravel,
+    //         style: TextStyleCommon.containersHeadingStyle,
+    //       ),
+    //       SizedBox(
+    //         height: Get.height * 0.0139,
+    //       ),
+    //       const Padding(
+    //         padding: EdgeInsets.only(right: 30.0),
+    //         child: Text(
+    //           StringRes.discTwo,
+    //           style: TextStyleCommon.containertextStyle,
+    //           overflow: TextOverflow.ellipsis,
+    //         ),
+    //       ),
+    //     ],
+    //   ),
+    // ),
+    // Container(
+    //   padding: const EdgeInsets.all(20.0),
+    //   margin: const EdgeInsets.all(5.0),
+    //   width: 300,
+    //   decoration: BoxDecoration(
+    //     image: DecorationImage(
+    //       image: enjoyFoodImage,
+    //       fit: BoxFit.cover,
+    //     ),
+    //     borderRadius: BorderRadius.circular(20.0),
+    //   ),
+    //   child: Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     mainAxisAlignment: MainAxisAlignment.end,
+    //     children: [
+    //       const Text(
+    //         StringRes.enjoyFood,
+    //         style: TextStyleCommon.containersHeadingStyle,
+    //       ),
+    //       SizedBox(
+    //         height: Get.height * 0.0139,
+    //       ),
+    //       const Padding(
+    //         padding: EdgeInsets.only(right: 30.0),
+    //         child: Text(
+    //           StringRes.discthree,
+    //           style: TextStyleCommon.containertextStyle,
+    //           overflow: TextOverflow.ellipsis,
+    //         ),
+    //       ),
+    //     ],
+    //   ),
+    // ),
+    // ],
   );
 }
 

@@ -8,7 +8,6 @@ import '../hotel_screen/hotel_screen.dart';
 class SliderController extends GetxController {
   Map<String, dynamic> valueImage = {};
   List imageList = [];
-  int? changeindex;
 
   @override
   void onInit() {
@@ -41,5 +40,26 @@ class SliderController extends GetxController {
     'https://wallpapershome.com/images/pages/pic_h/23716.jpg',
     'https://wallpapershome.com/images/pages/pic_h/23719.jpg',
     'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2014/12/FINAL-Bread.jpg?resize=600%2C400&ssl=1',
+  ];
+
+  List<Map> imagelist = [
+    {
+      "image": "https://wallpapershome.com/images/pages/pic_h/23716.jpg",
+      "detail": [
+        {"name": "xyz", "des": "abc"}
+      ]
+    },
+    {
+      "image": "https://wallpapershome.com/images/pages/pic_h/23719.jpg",
+      "detail": [
+        {"name": "xyz", "des": "abc"}
+      ]
+    },
+    {
+      "image": "https://wallpapershome.com/images/pages/pic_h/23716.jpg",
+      "detail": [
+        {"name": "xyz", "des": "abc"}
+      ]
+    },
   ];
 }
