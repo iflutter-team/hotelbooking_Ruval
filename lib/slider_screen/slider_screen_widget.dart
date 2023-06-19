@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:hotels/city_screen/city_scree.dart';
 import 'package:hotels/slider_screen/slider_screen_controller.dart';
 import 'package:hotels/utils/colors.dart';
-import '../utils/image.dart';
 import '../utils/string.dart';
 import '../utils/text.dart';
 
@@ -25,7 +24,7 @@ Widget welcomeScreenSlider() {
           height: Get.height * 0.5244,
           enlargeCenterPage: true,
           enableInfiniteScroll: true,
-          autoPlay: true,
+          // autoPlay: true,
           autoPlayCurve: Curves.fastOutSlowIn,
           autoPlayAnimationDuration: const Duration(milliseconds: 800),
         ),

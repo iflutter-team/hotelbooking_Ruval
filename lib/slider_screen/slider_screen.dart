@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 import 'package:hotels/slider_screen/slider_screen_controller.dart';
 import 'slider_screen_widget.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  WelcomeScreen({
+class SliderScreen extends StatelessWidget {
+  SliderScreen({
     super.key,
   });
 
