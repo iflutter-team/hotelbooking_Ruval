@@ -15,7 +15,11 @@ class CityScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
-              children: [Expanded(child: citylist())],
+              children: [
+                Expanded(
+                  child: citylist(),
+                ),
+              ],
             ),
           )),
     );

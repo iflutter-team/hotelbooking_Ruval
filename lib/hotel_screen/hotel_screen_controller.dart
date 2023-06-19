@@ -1,10 +1,11 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class HotelController extends GetxController {
-  // void book() {
-  //   Get.to(const UserScreen());
-  // }
+  int imageindex = 0;
+  List? hotelList;
+  List? imageList;
 
   void booking(List hotelList, int index) {
     Get.to(
@@ -17,5 +18,14 @@ class HotelController extends GetxController {
           ),
       ),
     );
+  }
+
+  void imageUpdate(
+    int index,
+    List hotelList,
+    List imageList,
+  ) {
+    imageindex = index;
+    update(["update"]);
   }
 }

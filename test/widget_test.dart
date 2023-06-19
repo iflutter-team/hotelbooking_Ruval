@@ -13,7 +13,7 @@ import 'package:hotels/slider_screen/slider_screen.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(SliderScreen());
+    await tester.pumpWidget(const SliderScreen());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

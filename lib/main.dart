@@ -13,7 +13,7 @@ main() async {
           child: widget!),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
-      home: SliderScreen(),
+      home: const SliderScreen(),
     ),
   );
 }

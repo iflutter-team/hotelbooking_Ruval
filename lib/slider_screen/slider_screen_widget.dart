@@ -48,7 +48,9 @@ Widget welcomeScreenSlider() {
             children: [
               Text(
                 controller.imageData[index]["name"],
-                style: TextStyleCommon.containersHeadingStyle,
+                style: TextStyleCommon.headingsTextsFont(
+                  TextStyleCommon.containersHeadingStyle,
+                ),
               ),
               SizedBox(
                 height: Get.height * 0.0139,
@@ -57,8 +59,9 @@ Widget welcomeScreenSlider() {
                 padding: const EdgeInsets.only(right: 30.0),
                 child: Text(
                   controller.imageData[index]["des"],
-                  style: TextStyleCommon.containertextStyle,
-                  overflow: TextOverflow.ellipsis,
+                  style: TextStyleCommon.textFont(
+                      TextStyleCommon.containertextStyle),
+                  // overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],
@@ -76,10 +79,10 @@ Widget sliderScreenButton = OpenContainer(
     return SizedBox(
       height: Get.height * 0.0582,
       width: Get.width * 0.2544,
-      child: Center(
+      child: const Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text(
               StringRes.continues,
               style: TextStyleCommon.continuetextStyle,

@@ -53,14 +53,22 @@ Widget hoteldatashow(List hotelList) {
             ListTile(
               title: Text(
                 hotelList[index]["hotelname"],
-                style: TextStyleCommon.hoteltextStyle,
+                style: TextStyleCommon.headingsTextsFont(
+                  TextStyleCommon.hoteltextStyle,
+                ),
               ),
               trailing: Text(
                 hotelList[index]["price"],
-                style: TextStyleCommon.pricetextStyle,
+                style: TextStyleCommon.textFont(
+                  TextStyleCommon.pricetextStyle,
+                ),
               ),
               subtitle: Text(
                 hotelList[index]["dis"],
+                textAlign: TextAlign.justify,
+                style: TextStyleCommon.textFont(
+                  TextStyleCommon.distextStyle,
+                ),
               ),
             ),
             SizedBox(

@@ -47,7 +47,9 @@ Widget citylist() {
                   children: [
                     Text(
                       controller.imageList[index]["countryName"],
-                      style: TextStyleCommon.containersHeadingStyle,
+                      style: TextStyleCommon.headingsTextsFont(
+                        TextStyleCommon.containersHeadingStyle,
+                      ),
                     ),
                   ]),
             ),

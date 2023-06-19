@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:hotels/utils/colors.dart';
 
@@ -26,4 +27,13 @@ class TextStyleCommon {
     fontWeight: FontWeight.bold,
     fontSize: 30,
   );
+  static const TextStyle distextStyle = TextStyle(
+    color: ColorsRes.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 13,
+  );
+  static TextStyle headingsTextsFont(headingStyles) =>
+      GoogleFonts.asul(textStyle: headingStyles);
+  static TextStyle textFont(textfont) =>
+      GoogleFonts.gabriela(textStyle: textfont);
 }
