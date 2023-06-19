@@ -13,7 +13,6 @@ class SliderController extends GetxController {
   @override
   void onInit() {
     continues();
-
     super.onInit();
   }
 
@@ -35,6 +34,11 @@ class SliderController extends GetxController {
           index: index,
           imageList: imageList,
         ));
+  }
+
+  void onPageChange(int index) {
+    imageindex = index;
+    update(["bg"]);
   }
 
   List<Map> imageData = [
