@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:hotels/utils/colors.dart';
 
 class TextStyleCommon {
