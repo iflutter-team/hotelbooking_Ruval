@@ -8,7 +8,7 @@ import '../hotel_screen/hotel_screen.dart';
 class SliderController extends GetxController {
   Map<String, dynamic> valueImage = {};
   List imageList = [];
-  int imageindex = 0;
+  int? imageindex;
 
   @override
   void onInit() {
