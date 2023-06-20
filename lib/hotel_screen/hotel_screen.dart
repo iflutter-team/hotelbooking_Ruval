@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,10 +13,10 @@ class HotelScreen extends StatelessWidget {
   List? imageList;
   int? index;
   HotelScreen({super.key, this.hotelList, this.index, this.imageList});
-  HotelController hotelcontroller = Get.put(HotelController());
 
   @override
   Widget build(BuildContext context) {
+    Get.put(HotelController());
     return Scaffold(
       backgroundColor: Colors.transparent,
       // appBar: hotelappbar(imageList!, index!),
