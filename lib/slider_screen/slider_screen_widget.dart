@@ -16,8 +16,6 @@ AppBar sliderAppBar = AppBar(
   title: const Text(StringRes.appname),
 );
 Widget welcomeScreenSlider() {
-  // print(Get.height);
-  // print(Get.width);
   return GetBuilder<SliderController>(
     builder: (controller) => CarouselSlider.builder(
       options: CarouselOptions(
@@ -61,7 +59,6 @@ Widget welcomeScreenSlider() {
                   controller.imageData[index]["des"],
                   style: TextStyleCommon.textFont(
                       TextStyleCommon.containertextStyle),
-                  // overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],

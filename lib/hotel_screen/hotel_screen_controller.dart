@@ -8,7 +8,7 @@ class HotelController extends GetxController {
 
   void booking(List hotelList, int index) {
     Get.to(
-      WebViewWidget(
+      () => WebViewWidget(
         controller: WebViewController()
           ..loadRequest(
             Uri.parse(

@@ -26,9 +26,4 @@ class StringRes {
   static const hintcity = "EnterCity";
   static const labelcity = "EnterCity";
   static const appname = "RoyelHotel";
-  static const discone =
-      'Traveling around the world means to explore different cultures, landscapes, and experiences. It is an opportunity to learn about new places and people.';
-  static const discTwo =
-      'A journey of a thousand miles must begin with a single step.';
-  static const discthree = 'Also enjoy the best food task during travelling.';
 }
