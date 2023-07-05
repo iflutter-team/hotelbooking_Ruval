@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotels/hotel_screen/hotel_screen_controller.dart';
+import 'package:hotels/slider_screen/slider_screen_controller.dart';
 import '../utils/colors.dart';
 import '../utils/icons.dart';
 import '../utils/string.dart';
@@ -27,8 +28,8 @@ class HotelScreen extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image:
-                  NetworkImage(hotelList?[controller.imageindex]["hotelimage"]),
+              image: NetworkImage(
+                  hotelList?[controller.imageindex ?? 0]["hotelimage"]),
             ),
           ),
           child: BackdropFilter(
@@ -47,11 +48,13 @@ class HotelScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: Get.width * 0.2290),
-                      Text(
-                        imageList?[controller.imageindex]["countryName"] +
-                            StringRes.hotel,
-                        style: TextStyleCommon.textFont(
-                          TextStyleCommon.containersHeadingStyle,
+                      GetBuilder<SliderController>(
+                        builder: (controller) => Text(
+                          imageList?[index ?? 0]["countryName"] +
+                              StringRes.hotel,
+                          style: TextStyleCommon.textFont(
+                            TextStyleCommon.containersHeadingStyle,
+                          ),
                         ),
                       ),
                     ],

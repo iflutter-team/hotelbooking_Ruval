@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class HotelController extends GetxController {
-  int imageindex = 0;
+  int? imageindex;
   List? hotelList;
   List? imageList;
 
@@ -17,14 +17,5 @@ class HotelController extends GetxController {
           ),
       ),
     );
-  }
-
-  void imageUpdate(
-    int index,
-    List hotelList,
-    List imageList,
-  ) {
-    imageindex = index;
-    update(["update"]);
   }
 }

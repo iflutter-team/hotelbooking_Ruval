@@ -17,13 +17,5 @@ class StringRes {
   static const book = "BookNow";
   static const details = "Detail";
   static const hotel = " Hotel";
-  static const hintname = "EnterName";
-  static const labelname = "EnterName";
-  static const hintnumber = "EnterNumber";
-  static const labelnumber = "EnterNumber";
-  static const hintemail = "EnterValidEmail";
-  static const labelemail = "EnterValidEmail";
-  static const hintcity = "EnterCity";
-  static const labelcity = "EnterCity";
   static const appname = "RoyelHotel";
 }
